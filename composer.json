@@ -11,5 +11,11 @@
             "email": "sinyavtsev.alek@yandex.ru"
         }
     ],
-    "require": {}
+    "description": "hexlet brain-games",
+    "license": "MIT",
+    "require": {},
+    "bin": [
+	    "bin/brain-games"
+    ]
 }
+
