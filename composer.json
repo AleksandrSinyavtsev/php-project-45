@@ -13,9 +13,10 @@
     ],
     "description": "hexlet brain-games",
     "license": "MIT",
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.18"
+    },
     "bin": [
 	    "bin/brain-games"
     ]
 }
-
