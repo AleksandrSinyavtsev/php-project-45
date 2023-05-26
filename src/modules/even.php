@@ -2,8 +2,8 @@
 
 namespace src\modules\even;
 
-use function src\modules\startGame;
-use const src\modules\engine\ATTEMPT_COUNT;
+use function src\modules\game-engine\startGame;
+use const src\modules\game-engine\ATTEMPT_COUNT;
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
