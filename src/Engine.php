@@ -1,9 +1,9 @@
 <?php
 
-namespace src\modules\game-engine;
+namespace src\modules\Engine;
 
-use function cli/line;
-use function cli/prompt
+use function cli\line;
+use function cli\prompt;
 
 const ATTEMPT_COUNT = 3;
 
@@ -15,17 +15,16 @@ function startGame(string $rules, array $gameData) {
 
 	foreach ($gameData as [$question, $rightAnswer]) {
 		line("Question: " .$question);
-		$answer = prompt("Your answer is: ");
+		$answer = prompt("Your answer is");
 
 		if ($answer === $rightAnswer) {
 			line("Correct!");
 		} else {
-			line("%s is wrong answer ;(/ Correct answer is '%s'.\n
-				Let''s try again, %s!", $answer, $rightAnswer, $name);
-                }
+			line("%s is wrong answer. Correct answer is '%s'.\n
+				Let's try again, %s!", $answer, $rightAnswer, $name);
+                        break;
+		}
+		line("Congratulation, %s!", $name);
         }
-
-        line("Congratulations, %s!, $name);
 }
-
 
