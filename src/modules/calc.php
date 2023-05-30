@@ -22,7 +22,7 @@ function calculate($number1, $number2, $sign) {
 }
 
 function isCorrect(string $answer, int $number1, $number2, $sign): bool {
-    if ($answer == calculate($number1, $number2, $sign)) {
+    if ($answer === calculate($number1, $number2, $sign)) {
         return true;
     } else {
 	return false;								            }
@@ -41,7 +41,7 @@ function run() {
 	$number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $sign = choiceSign();
-	$correctAnswer = calculate($number1, $number2, $sign);
+	$correctAnswer = strval(calculate($number1, $number2, $sign));
 	$question = "$number1  $sign  $number2";
 	$gameData[] = [$question, $correctAnswer];
 	$userAttempts++;

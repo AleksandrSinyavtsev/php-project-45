@@ -22,9 +22,9 @@ function startGame(string $rules, array $gameData) {
 		} else {
 			line("%s is wrong answer. Correct answer is '%s'.\n
 				Let's try again, %s!", $answer, $rightAnswer, $name);
-                        break;
+                        exit;
 		}
-		line("Congratulation, %s!", $name);
-        }
+	}
+	line("Congratulation, %s!", $name);
 }
 
