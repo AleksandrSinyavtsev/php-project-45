@@ -9,7 +9,8 @@
 		"src/modules/even.php",
 		"src/modules/calc.php",
 		"src/modules/gcd.php",
-		"src/modules/progression.php"
+		"src/modules/progression.php",
+		"src/modules/prime.php"
 	]
     },
     "authors": [
@@ -31,7 +32,8 @@
 	    "bin/brain-even",
 	    "bin/brain-calc",
 	    "bin/brain-gcd",
-	    "bin/brain-progression"
+	    "bin/brain-progression",
+	    "bin/brain-prime"
     ]
 }
 
