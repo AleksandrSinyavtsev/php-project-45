@@ -25,6 +25,6 @@ function startGame(string $rules, array $gameData) {
                         exit;
 		}
 	}
-	line("Congratulation, %s!", $name);
+	line("Congratulations, %s!", $name);
 }
 
