@@ -8,7 +8,7 @@ use const src\modules\Engine\ATTEMPT_COUNT;
 
 const RULES = 'What number is missing in the progression?';
 
-function generateProgression($startItem, $step, $itemsCount): array 
+function generateProgression($startItem, $step, $itemsCount): array
 {
 
     $prog = [];
@@ -55,7 +55,7 @@ function run()
         $itemsCount = 10;
         $step = rand(1, 10);
         $keyIndex = rand(0, 9);
-        $progression = generateProgression($startItem, $step, $itemsCount); 
+	$progression = generateProgression($startItem, $step, $itemsCount); 
         $correctAnswer = strval(makeKeyNumber($progression, $keyIndex));
         $question = implode(' ', prepareProgression($progression, $keyIndex));
         $gameData[] = [$question, $correctAnswer];
