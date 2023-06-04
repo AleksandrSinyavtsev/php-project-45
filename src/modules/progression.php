@@ -55,7 +55,7 @@ function run()
         $itemsCount = 10;
         $step = rand(1, 10);
         $keyIndex = rand(0, 9);
-	$progression = generateProgression($startItem, $step, $itemsCount); 
+        $progression = generateProgression($startItem, $step, $itemsCount);
         $correctAnswer = strval(makeKeyNumber($progression, $keyIndex));
         $question = implode(' ', prepareProgression($progression, $keyIndex));
         $gameData[] = [$question, $correctAnswer];
@@ -63,4 +63,3 @@ function run()
     }
         startGame(RULES, $gameData);
 }
-
