@@ -10,7 +10,7 @@ const RULES = 'What is the result of the expression?';
 
 function calculate($number1, $number2, $sign)
 {
-    switch($sign) {
+    switch ($sign) {
         case '+':
             return $number1 + $number2;
             break;
@@ -28,8 +28,9 @@ function isCorrect(string $answer, int $number1, $number2, $sign): bool
     if ($answer === calculate($number1, $number2, $sign)) {
         return true;
     } else {
-        return false;								            }
+	    return false;
     }
+}
 
 function choiceSign()
 {
