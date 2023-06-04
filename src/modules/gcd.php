@@ -30,7 +30,7 @@ function isCorrect(string $answer, int $number1, int $number2): bool
     if ($answer === findGCD($number1, $number2)) {
         return true;
     } else {
-	    return false;
+        return false;
     }
 }
 
