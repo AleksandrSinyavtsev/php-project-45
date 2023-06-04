@@ -29,7 +29,7 @@ function isCorrect(string $answer, int $number): bool
     if ($answer === isPrime($number)) {
         return true;
     } else {
-	    return false;
+        return false;
     }
 }
 

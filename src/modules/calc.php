@@ -28,7 +28,7 @@ function isCorrect(string $answer, int $number1, $number2, $sign): bool
     if ($answer === calculate($number1, $number2, $sign)) {
         return true;
     } else {
-	    return false;
+        return false;
     }
 }
 
