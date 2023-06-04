@@ -14,7 +14,7 @@ function startGame(string $rules, array $gameData)
     line("Hello, %s!", $name);
     line($rules);
     foreach ($gameData as [$question, $rightAnswer]) {
-        line("Question: " .$question);
+        line("Question: " . $question);
         $answer = prompt("Your answer is");
         if ($answer === $rightAnswer) {
             line("Correct!");
