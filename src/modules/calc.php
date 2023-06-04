@@ -8,22 +8,19 @@ use const src\modules\Engine\ATTEMPT_COUNT;
 
 const RULES = 'What is the result of the expression?';
 
-function calculate($number1, $number2, $sign)
+function calculate(int $number1, int $number2, string $sign)
 {
     switch ($sign) {
         case '+':
             return $number1 + $number2;
-            break;
         case '-':
             return $number1 - $number2;
-            break;
         case '*':
             return $number1 * $number2;
-            break;
     }
 }
 
-function isCorrect(string $answer, int $number1, $number2, $sign): bool
+function isCorrect(string $answer, int $number1, int $number2, string $sign): bool
 {
     if ($answer === calculate($number1, $number2, $sign)) {
         return true;

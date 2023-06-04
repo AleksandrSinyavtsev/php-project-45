@@ -8,7 +8,7 @@ use const src\modules\Engine\ATTEMPT_COUNT;
 
 const RULES = 'What number is missing in the progression?';
 
-function generateProgression($startItem, $step, $itemsCount): array
+function generateProgression(int $startItem, int $step, int $itemsCount): array
 {
 
     $prog = [];
@@ -21,24 +21,24 @@ function generateProgression($startItem, $step, $itemsCount): array
     return $prog;
 }
 
-function makeKeyNumber($array, $keyIndex): int
+function makeKeyNumber(array $array, int $keyIndex): int
 {
 
     $keyNumber = $array[$keyIndex];
     return $keyNumber;
 }
 
-function prepareProgression($array, $keyIndex): array
+function prepareProgression(array $array, int $keyIndex): array
 {
     $temp = $array;
     $temp[$keyIndex] = '..';
     return $temp;
 }
 
-function isCorrect(string $answer, $array, $keyIndex): bool
+function isCorrect(string $answer, array $array, int $keyIndex): bool
 {
 
-    if ($answer ===  makeKeyNumber($array, $keyIndex)) {
+    if ($answer ==  makeKeyNumber($array, $keyIndex)) {
         return true;
     } else {
         return false;
