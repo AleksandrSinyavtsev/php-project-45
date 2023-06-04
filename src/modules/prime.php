@@ -8,7 +8,7 @@ use const src\modules\Engine\ATTEMPT_COUNT;
 
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime($number): string
+function isPrime(int $number): string
 {
     $primeNumbers = [2, 3, 5, 7, 11 ,13, 17, 19, 23, 29,
         31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73,
@@ -17,8 +17,6 @@ function isPrime($number): string
     for ($i = 0; $i < count($primeNumbers); $i++) {
         if ($number == $primeNumbers[$i]) {
             $resalt = 'yes';
-            return $resalt;
-            exit();
         }
     }
     return $resalt;

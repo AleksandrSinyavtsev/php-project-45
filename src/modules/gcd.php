@@ -8,7 +8,7 @@ use const src\modules\Engine\ATTEMPT_COUNT;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
-function findGCD($number1, $number2): int
+function findGCD(int $number1, int $number2): int
 {
     if ($number1 >= $number2) {
         $m = $number1;
@@ -27,7 +27,7 @@ function findGCD($number1, $number2): int
 
 function isCorrect(string $answer, int $number1, int $number2): bool
 {
-    if ($answer === findGCD($number1, $number2)) {
+    if ($answer == findGCD($number1, $number2)) {
         return true;
     } else {
         return false;
