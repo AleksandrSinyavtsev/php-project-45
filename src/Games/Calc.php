@@ -23,8 +23,7 @@ function calculate(int $number1, int $number2, string $sign)
 function choiceSign()
 {
     $signs = ['+', '-', '*'];
-    $sign = $signs[rand(0, 2)];
-    return $sign;
+    return $signs[rand(0, 2)];
 }
 
 function run()
