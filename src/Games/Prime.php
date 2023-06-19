@@ -1,10 +1,10 @@
 <?php
 
-namespace src\modules\prime;
+namespace BrainGames\Games\Prime;
 
-use function src\modules\Engine\startGame;
+use function BrainGames\Games\Engine\startGame;
 
-use const src\modules\Engine\ATTEMPT_COUNT;
+use const BrainGames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -20,15 +20,6 @@ function isPrime(int $number): string
         }
     }
     return $resalt;
-}
-
-function isCorrect(string $answer, int $number): bool
-{
-    if ($answer === isPrime($number)) {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 function run()

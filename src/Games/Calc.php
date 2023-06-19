@@ -1,10 +1,10 @@
 <?php
 
-namespace src\modules\calc;
+namespace BrainGames\Games\Calc;
 
-use function src\modules\Engine\startGame;
+use function BrainGames\Games\Engine\startGame;
 
-use const src\modules\Engine\ATTEMPT_COUNT;
+use const Braingames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'What is the result of the expression?';
 
@@ -17,15 +17,6 @@ function calculate(int $number1, int $number2, string $sign)
             return $number1 - $number2;
         case '*':
             return $number1 * $number2;
-    }
-}
-
-function isCorrect(string $answer, int $number1, int $number2, string $sign): bool
-{
-    if ($answer === calculate($number1, $number2, $sign)) {
-        return true;
-    } else {
-        return false;
     }
 }
 

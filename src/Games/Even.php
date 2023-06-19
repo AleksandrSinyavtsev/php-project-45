@@ -1,10 +1,10 @@
 <?php
 
-namespace src\modules\even;
+namespace BrainGames\Games\Even;
 
-use function src\modules\Engine\startGame;
+use function BrainGames\Games\Engine\startGame;
 
-use const src\modules\Engine\ATTEMPT_COUNT;
+use const BrainGames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -14,15 +14,6 @@ function isEven(int $n): string
         return 'yes';
     } else {
         return 'no';
-    }
-}
-
-function isCorrect(string $answer, int $number): bool
-{
-    if ($answer === isEven($number)) {
-        return true;
-    } else {
-        return false;
     }
 }
 

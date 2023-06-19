@@ -1,10 +1,10 @@
 <?php
 
-namespace src\modules\progression;
+namespace BrainGames\Games\Progression;
 
-use function src\modules\Engine\startGame;
+use function BrainGames\Games\Engine\startGame;
 
-use const src\modules\Engine\ATTEMPT_COUNT;
+use const BrainGames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'What number is missing in the progression?';
 
@@ -33,16 +33,6 @@ function prepareProgression(array $array, int $keyIndex): array
     $temp = $array;
     $temp[$keyIndex] = '..';
     return $temp;
-}
-
-function isCorrect(string $answer, array $array, int $keyIndex): bool
-{
-
-    if ($answer ==  makeKeyNumber($array, $keyIndex)) {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 function run()

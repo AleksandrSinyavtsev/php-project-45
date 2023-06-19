@@ -1,10 +1,10 @@
 <?php
 
-namespace src\modules\gcd;
+namespace BrainGames\Games\Gcd;
 
-use function src\modules\Engine\startGame;
+use function BrainGames\Games\Engine\startGame;
 
-use const src\modules\Engine\ATTEMPT_COUNT;
+use const BrainGames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
@@ -23,15 +23,6 @@ function findGCD(int $number1, int $number2): int
         $n = $temp;
     }
     return $m;
-}
-
-function isCorrect(string $answer, int $number1, int $number2): bool
-{
-    if ($answer == findGCD($number1, $number2)) {
-        return true;
-    } else {
-        return false;
-    }
 }
 
 function run()
