@@ -49,7 +49,7 @@ function run()
         $correctAnswer = strval(makeKeyNumber($progression, $keyIndex));
         $question = implode(' ', prepareProgression($progression, $keyIndex));
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts++;
+        $userAttempts += 1;
     }
         startGame(RULES, $gameData);
 }

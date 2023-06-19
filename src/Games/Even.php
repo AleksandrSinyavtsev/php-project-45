@@ -8,13 +8,9 @@ use const BrainGames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEven(int $n): string
+function isEven(int $n): bool
 {
-    if ($n % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+    return $n % 2 === 0;
 }
 
 function run()
@@ -23,10 +19,10 @@ function run()
     $userAttempts = 0;
     while ($userAttempts < ATTEMPT_COUNT) {
         $number = rand(1, 100);
-        $correctAnswer = isEven($number);
+        $correctAnswer = isEven($number) ? 'yes' : 'no';
         $question = $number;
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts++;
+        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }

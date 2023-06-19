@@ -13,13 +13,13 @@ function isPrime(int $number): string
     $primeNumbers = [2, 3, 5, 7, 11 ,13, 17, 19, 23, 29,
         31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73,
         79, 83, 89, 97];
-    $resalt = 'no';
+    $result = 'no';
     for ($i = 0; $i < count($primeNumbers); $i++) {
         if ($number == $primeNumbers[$i]) {
-            $resalt = 'yes';
+            $result = 'yes';
         }
     }
-    return $resalt;
+    return $result;
 }
 
 function run()
@@ -31,7 +31,7 @@ function run()
         $correctAnswer = isPrime($number);
         $question = "$number";
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts++;
+        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }

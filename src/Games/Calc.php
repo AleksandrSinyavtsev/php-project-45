@@ -37,7 +37,7 @@ function run()
         $correctAnswer = strval(calculate($number1, $number2, $sign));
         $question = "$number1 $sign $number2";
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts++;
+        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }

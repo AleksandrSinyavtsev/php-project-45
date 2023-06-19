@@ -11,18 +11,18 @@ const RULES = 'Find the greatest common divisor of given numbers.';
 function findGCD(int $number1, int $number2): int
 {
     if ($number1 >= $number2) {
-        $m = $number1;
-        $n = $number2;
+        $firstNum = $number1;
+        $secondNum = $number2;
     } else {
-        $m = $number2;
-        $n = $number1;
+        $firstNum = $number2;
+        $secondNum = $number1;
     }
-    while ($n > 0) {
-        $temp = $m % $n;
-        $m = $n;
-        $n = $temp;
+    while ($secondNum > 0) {
+        $temp = $firstNum % $secondNum;
+        $firstNum = $secondNum;
+        $secondNum = $temp;
     }
-    return $m;
+    return $firstNum;
 }
 
 function run()
@@ -35,7 +35,7 @@ function run()
         $correctAnswer = strval(findGCD($number1, $number2));
         $question = "$number1 $number2";
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts++;
+        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }
