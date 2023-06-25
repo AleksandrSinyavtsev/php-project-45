@@ -16,7 +16,7 @@ function generateProgression(int $startItem, int $step, int $itemsCount): array
     while ($index < $itemsCount) {
         $prog[] = $startItem;
         $startItem += $step;
-        $index++;
+        $index += 1;
     }
     return $prog;
 }
