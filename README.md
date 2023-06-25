@@ -8,12 +8,34 @@
 если ответы верны - вы победили! Если нет - чтож не расстраивайтесь, лучше попробуйте снова!
 
 Установить игру просто:
-Клонируете репозиторий
-git clone https://github.com/AleksandrSinyavtsev/php-project-45.git
-Входите в папку с проектом
-cd php-project-45
-И устанавливаете дополнительные утилиты
-make install
+Клонируете репозиторий - 
+git clone https://github.com/AleksandrSinyavtsev/php-project-45.git.
+Входите в папку с проектом - 
+cd php-project-45.
+И устанавливаете дополнительные утилиты - 
+make install.
+
+"Калькулятор"
+
+![Calc](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/cc309a6c-b35f-40b1-9d79-bb2eec7722a3)
+
+"Четное - нечетное"
+
+![Even](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/53e8140b-b3bb-40db-a4fa-06fd497644f3)
+
+"Простые числа"
+
+![Prime](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/1b5a5de9-9d1e-4fb4-8bda-36a6debc1b60)
+
+"Наибольший общий множитель"
+
+![GCD](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/ff78949c-4271-43bb-bdd1-eb569ed69800)
+
+"Прогрессия"
+
+![Progression](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/f6d384c2-1cbc-4bc2-8863-4215d5f8e2a4)
+
+
 
 
 
