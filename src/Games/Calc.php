@@ -8,7 +8,7 @@ use const Braingames\Games\Engine\ATTEMPT_COUNT;
 
 const RULES = 'What is the result of the expression?';
 
-function calculate(int $number1, int $number2, string $sign) : int
+function calculate(int $number1, int $number2, string $sign): int
 {
     switch ($sign) {
         case '+':
@@ -20,7 +20,7 @@ function calculate(int $number1, int $number2, string $sign) : int
     }
 }
 
-function choiceSign() : string
+function choiceSign(): string
 {
     $signs = ['+', '-', '*'];
     return $signs[rand(0, 2)];
