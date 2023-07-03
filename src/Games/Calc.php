@@ -10,14 +10,16 @@ const RULES = 'What is the result of the expression?';
 
 function calculate(int $number1, int $number2, string $sign): int
 {
+    $result = -1;
     switch ($sign) {
         case '+':
-            return $number1 + $number2;
+            $result = $number1 + $number2;
         case '-':
-            return $number1 - $number2;
+            $result = $number1 - $number2;
         case '*':
-            return $number1 * $number2;
+            $result = $number1 * $number2;
     }
+    return $result;
 }
 
 function choiceSign(): string
