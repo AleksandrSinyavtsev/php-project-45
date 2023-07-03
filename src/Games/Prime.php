@@ -12,9 +12,9 @@ function isPrime(int $number): bool
 {
     $dividersCount = 0;
     for ($i = 1; $i <= $number; $i += 1) {
-	    if ($number % $i == 0) {
-                $dividersCount += 1;
-	    }
+        if ($number % $i == 0) {
+            $dividersCount += 1;
+        }
     }
     return $dividersCount <= 2;
 }
