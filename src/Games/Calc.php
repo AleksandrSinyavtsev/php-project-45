@@ -17,6 +17,8 @@ function calculate(int $number1, int $number2, string $sign): int
             return $number1 - $number2;
         case '*':
             return $number1 * $number2;
+        default:
+            throw new Exception('there are no real numbers to calculate');
     }
 }
 
