@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Games\Engine\startGame;
 
-use const Braingames\Games\Engine\ATTEMPT_COUNT;
+use const Braingames\Games\Engine\ROUNDS_COUNT;
 
 const RULES = 'What is the result of the expression?';
 
@@ -22,20 +22,15 @@ function calculate(int $number1, int $number2, string $sign): int
     }
 }
 
-function choiceSign(): string
-{
-    $signs = ['+', '-', '*'];
-    return $signs[rand(0, 2)];
-}
-
 function run()
 {
     $gameData = [];
     $userAttempts = 0;
-    while ($userAttempts < ATTEMPT_COUNT) {
+    $signs = ['+', '-', '*'];
+    while ($userAttempts < ROUNDS_COUNT) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
-        $sign = choiceSign();
+        $sign = $signs[rand(0, 2)];
         $correctAnswer = strval(calculate($number1, $number2, $sign));
         $question = "$number1 $sign $number2";
         $gameData[] = [$question, $correctAnswer];

@@ -4,7 +4,7 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Games\Engine\startGame;
 
-use const BrainGames\Games\Engine\ATTEMPT_COUNT;
+use const BrainGames\Games\Engine\ROUNDS_COUNT;
 
 const RULES = 'What number is missing in the progression?';
 
@@ -40,7 +40,7 @@ function run()
 
     $gameData = [];
     $userAttempts = 0;
-    while ($userAttempts < ATTEMPT_COUNT) {
+    while ($userAttempts < ROUNDS_COUNT) {
         $startItem = rand(1, 100);
         $itemsCount = 10;
         $step = rand(1, 10);

@@ -5,7 +5,7 @@ namespace BrainGames\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const ATTEMPT_COUNT = 3;
+const ROUNDS_COUNT = 3;
 
 function startGame(string $rules, array $gameData)
 {
