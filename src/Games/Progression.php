@@ -21,20 +21,6 @@ function generateProgression(int $startItem, int $step, int $itemsCount): array
     return $prog;
 }
 
-function makeKeyNumber(array $array, int $keyIndex): int
-{
-
-    $keyNumber = $array[$keyIndex];
-    return $keyNumber;
-}
-
-function prepareProgression(array $array, int $keyIndex): array
-{
-    $temp = $array;
-    $temp[$keyIndex] = '..';
-    return $temp;
-}
-
 function run()
 {
 
@@ -46,8 +32,11 @@ function run()
         $step = rand(1, 10);
         $keyIndex = rand(0, 9);
         $progression = generateProgression($startItem, $step, $itemsCount);
-        $correctAnswer = strval(makeKeyNumber($progression, $keyIndex));
-        $question = implode(' ', prepareProgression($progression, $keyIndex));
+        $keyNumber = $progression[$keyIndex];
+        $preparingProgression = $progression;
+        $preparingProgression[$keyIndex] = '..';
+        $correctAnswer = strval($keyNumber);
+        $question = implode(' ', $preparingProgression);
         $gameData[] = [$question, $correctAnswer];
         $userAttempts += 1;
     }
