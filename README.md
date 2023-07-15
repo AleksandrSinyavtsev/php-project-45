@@ -21,31 +21,36 @@
 *И устанавливаете дополнительные утилиты -   
 `make install`  
 
-## "Калькулятор"
+## "Калькулятор"  
+Вычислите выражение и введите правельный ответ!  
 
 `make brain-calc`
 
 ![Calc](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/cc309a6c-b35f-40b1-9d79-bb2eec7722a3)
 
-## "Четное - нечетное"
+## "Четное - нечетное"  
+Определите, четное ли число!  
 
 `make brain-even`
 
 ![Even](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/53e8140b-b3bb-40db-a4fa-06fd497644f3)
 
-## "Простые числа"
+## "Простые числа"  
+Является ли число простым?  
 
 `make brain-prime`
 
 ![Prime](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/1b5a5de9-9d1e-4fb4-8bda-36a6debc1b60)
 
-## "Наибольший общий множитель"
+## "Наибольший общий множитель"  
+Найдите наибольший общий множитель!  
 
 `make brain-gcd`
 
 ![GCD](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/ff78949c-4271-43bb-bdd1-eb569ed69800)
 
-## "Прогрессия"
+## "Прогрессия"  
+Найдите недостающее число в прогрессии!  
 
 `make brain-progression`
 
