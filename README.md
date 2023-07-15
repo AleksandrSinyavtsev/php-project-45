@@ -14,15 +14,15 @@
 
 ### Установить игру просто:  
 *Клонируете репозиторий -   
-'git clone https://github.com/AleksandrSinyavtsev/php-project-45.git'  
+`git clone https://github.com/AleksandrSinyavtsev/php-project-45.git`  
 *Входите в папку с проектом -   
-'cd php-project-45'  
+`cd php-project-45`  
 *И устанавливаете дополнительные утилиты -   
-'make install'  
+`make install`  
 
 ## "Калькулятор"
 
-'make brain-calc'
+`make brain-calc`
 
 ![Calc](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/cc309a6c-b35f-40b1-9d79-bb2eec7722a3)
 
@@ -34,19 +34,19 @@
 
 ## "Простые числа"
 
-'make brain-prime'
+`make brain-prime`
 
 ![Prime](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/1b5a5de9-9d1e-4fb4-8bda-36a6debc1b60)
 
 ## "Наибольший общий множитель"
 
-'make brain-gcd'
+`make brain-gcd`
 
 ![GCD](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/ff78949c-4271-43bb-bdd1-eb569ed69800)
 
 ## "Прогрессия"
 
-'make brain-progression'
+`make brain-progression`
 
 ![Progression](https://github.com/AleksandrSinyavtsev/php-project-45/assets/48642880/f6d384c2-1cbc-4bc2-8863-4215d5f8e2a4)
 
