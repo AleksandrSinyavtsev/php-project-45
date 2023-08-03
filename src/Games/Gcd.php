@@ -24,7 +24,7 @@ function findGCD(int $max, int $min): int
 function run()
 {
     $gameData = [];
-    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT; $userAttempts += 1) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $correctAnswer = strval(findGCD($number1, $number2));
