@@ -30,7 +30,6 @@ function run()
         $correctAnswer = strval(findGCD($number1, $number2));
         $question = "$number1 $number2";
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }

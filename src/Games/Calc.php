@@ -26,14 +26,13 @@ function run()
 {
     $gameData = [];
     $signs = ['+', '-', '*'];
-    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT; $userAttempts += 1) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $sign = $signs[rand(0, 2)];
         $correctAnswer = strval(calculate($number1, $number2, $sign));
         $question = "$number1 $sign $number2";
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }

@@ -27,7 +27,6 @@ function run()
         $correctAnswer = isPrime($number) ? 'yes' : 'no';
         $question = "$number";
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts += 1;
     }
     startGame(RULES, $gameData);
 }

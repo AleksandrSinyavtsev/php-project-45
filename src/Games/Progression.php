@@ -37,7 +37,6 @@ function run()
         $correctAnswer = strval($keyNumber);
         $question = implode(' ', $preparingProgression);
         $gameData[] = [$question, $correctAnswer];
-        $userAttempts += 1;
     }
         startGame(RULES, $gameData);
 }
