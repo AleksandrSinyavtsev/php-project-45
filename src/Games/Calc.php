@@ -25,9 +25,8 @@ function calculate(int $number1, int $number2, string $sign): int
 function run()
 {
     $gameData = [];
-    $userAttempts = 0;
     $signs = ['+', '-', '*'];
-    while ($userAttempts < ROUNDS_COUNT) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $sign = $signs[rand(0, 2)];

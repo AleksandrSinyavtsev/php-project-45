@@ -25,8 +25,7 @@ function run()
 {
 
     $gameData = [];
-    $userAttempts = 0;
-    while ($userAttempts < ROUNDS_COUNT) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
         $startItem = rand(1, 100);
         $itemsCount = 10;
         $step = rand(1, 10);

@@ -22,8 +22,7 @@ function isPrime(int $number): bool
 function run()
 {
     $gameData = [];
-    $userAttempts = 0;
-    while ($userAttempts < ROUNDS_COUNT) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
         $number = rand(2, 100);
         $correctAnswer = isPrime($number) ? 'yes' : 'no';
         $question = "$number";

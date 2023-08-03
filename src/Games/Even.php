@@ -16,8 +16,7 @@ function isEven(int $n): bool
 function run()
 {
     $gameData = [];
-    $userAttempts = 0;
-    while ($userAttempts < ROUNDS_COUNT) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
         $number = rand(1, 100);
         $correctAnswer = isEven($number) ? 'yes' : 'no';
         $question = $number;

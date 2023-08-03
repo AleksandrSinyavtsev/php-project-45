@@ -8,28 +8,23 @@ use const BrainGames\Games\Engine\ROUNDS_COUNT;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
-function findGCD(int $number1, int $number2): int
+function findGCD(int $max, int $min): int
 {
-    if ($number1 >= $number2) {
-        $firstNum = $number1;
-        $secondNum = $number2;
-    } else {
-        $firstNum = $number2;
-        $secondNum = $number1;
+    if ($max < $min) {
+        [$max, $min] = [$min, $max];
     }
-    while ($secondNum > 0) {
-        $temp = $firstNum % $secondNum;
-        $firstNum = $secondNum;
-        $secondNum = $temp;
+    while ($min > 0) {
+        $temp = $max % $min;
+        $max = $min;
+        $min = $temp;
     }
-    return $firstNum;
+    return $max;
 }
 
 function run()
 {
     $gameData = [];
-    $userAttempts = 0;
-    while ($userAttempts < ROUNDS_COUNT) {
+    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT + 1; $userAttempts += 1) {
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $correctAnswer = strval(findGCD($number1, $number2));
