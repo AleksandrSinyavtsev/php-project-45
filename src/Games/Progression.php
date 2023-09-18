@@ -6,31 +6,28 @@ use function BrainGames\Games\Engine\startGame;
 
 use const BrainGames\Games\Engine\ROUNDS_COUNT;
 
-const RULES = 'What number is missing in the progression?';
+const RULE = 'What number is missing in the progression?';
 
-function generateProgression(int $startItem, int $step, int $itemsCount): array
+function generateProgression(int $startItem, int $step, int $itemsCount = 10): array
 {
 
     $prog = [];
-    $index = 0;
-    while ($index < $itemsCount) {
+    for ($i = 0; $i < $itemsCount; $i += 1) {
         $prog[] = $startItem;
         $startItem += $step;
-        $index += 1;
     }
     return $prog;
 }
 
-function run()
+function run(): void
 {
 
     $gameData = [];
-    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT; $userAttempts += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $startItem = rand(1, 100);
-        $itemsCount = 10;
         $step = rand(1, 10);
         $keyIndex = rand(0, 9);
-        $progression = generateProgression($startItem, $step, $itemsCount);
+        $progression = generateProgression($startItem, $step);
         $keyNumber = $progression[$keyIndex];
         $preparingProgression = $progression;
         $preparingProgression[$keyIndex] = '..';
@@ -38,5 +35,5 @@ function run()
         $question = implode(' ', $preparingProgression);
         $gameData[] = [$question, $correctAnswer];
     }
-        startGame(RULES, $gameData);
+        startGame(RULE, $gameData);
 }

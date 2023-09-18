@@ -6,21 +6,21 @@ use function BrainGames\Games\Engine\startGame;
 
 use const BrainGames\Games\Engine\ROUNDS_COUNT;
 
-const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
+const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEven(int $n): bool
+function isEven(int $number): bool
 {
-    return $n % 2 === 0;
+    return $number % 2 === 0;
 }
 
-function run()
+function run(): void
 {
     $gameData = [];
-    for ($userAttempts = 0; $userAttempts < ROUNDS_COUNT; $userAttempts += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $number = rand(1, 100);
         $correctAnswer = isEven($number) ? 'yes' : 'no';
         $question = $number;
         $gameData[] = [$question, $correctAnswer];
     }
-    startGame(RULES, $gameData);
+    startGame(RULE, $gameData);
 }

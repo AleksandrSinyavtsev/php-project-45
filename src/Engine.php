@@ -16,13 +16,12 @@ function startGame(string $rules, array $gameData)
     foreach ($gameData as [$question, $rightAnswer]) {
         line("Question: %s", $question);
         $answer = prompt("Your answer is");
-        if ($answer === $rightAnswer) {
-            line("Correct!");
-        } else {
+        if ($answer !== $rightAnswer) {
             line("%s is wrong answer. Correct answer is '%s'.\n
-                Let's try again, %s!", $answer, $rightAnswer, $name);
+            Let's try again, %s!", $answer, $rightAnswer, $name);
             exit;
         }
+        line("Correct!");
     }
     line("Congratulations, %s!", $name);
 }
