@@ -10,7 +10,7 @@ const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime(int $number): bool
 {
-    $result = true; 
+    $result = true;
     for ($i = 2; $i < $number; $i += 1) {
         if ($number % $i == 0) {
             $result = false;
