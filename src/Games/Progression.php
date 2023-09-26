@@ -13,8 +13,7 @@ function generateProgression(int $startItem, int $step, int $itemsCount = 10): a
 
     $prog = [];
     for ($i = 0; $i < $itemsCount; $i += 1) {
-        $prog[] = $startItem;
-        $startItem += $step;
+        $prog[] = $startItem + $step * $i;
     }
     return $prog;
 }
@@ -26,8 +25,8 @@ function run(): void
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $startItem = rand(1, 100);
         $step = rand(1, 10);
-        $keyIndex = rand(0, 9);
         $progression = generateProgression($startItem, $step);
+        $keyIndex = array_rand($progression);
         $keyNumber = $progression[$keyIndex];
         $preparingProgression = $progression;
         $preparingProgression[$keyIndex] = '..';

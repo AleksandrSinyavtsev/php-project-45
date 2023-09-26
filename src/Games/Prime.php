@@ -10,13 +10,12 @@ const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime(int $number): bool
 {
-    $result = true;
     for ($i = 2; $i < $number; $i += 1) {
         if ($number % $i == 0) {
-            $result = false;
+            return false;
         }
     }
-    return $result;
+    return true;
 }
 
 function run(): void
