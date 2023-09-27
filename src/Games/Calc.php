@@ -31,8 +31,7 @@ function run(): void
         $number2 = rand(1, 100);
         $sign = $signs[rand(0, 2)];
         $correctAnswer = strval(calculate($number1, $number2, $sign));
-        $question = "$number1 $sign $number2";
-        $gameData[] = [$question, $correctAnswer];
+        $gameData[] = ["$number1 $sign $number2", $correctAnswer];
     }
     startGame(RULE, $gameData);
 }

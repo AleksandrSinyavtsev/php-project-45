@@ -28,8 +28,7 @@ function run(): void
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $correctAnswer = (string)(findGCD($number1, $number2));
-        $question = "$number1 $number2";
-        $gameData[] = [$question, $correctAnswer];
+        $gameData[] = ["$number1 $number2", $correctAnswer];
     }
     startGame(RULE, $gameData);
 }
